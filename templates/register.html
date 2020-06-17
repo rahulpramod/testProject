@@ -1,0 +1,29 @@
+ <!DOCTYPE html>  
+ <html>  
+ <head>  
+  <title>Form in HTML</title>  
+</head>
+ <body>  
+     <h2>Registration form</h2>  
+    <form action="signup" method="post">
+        {% csrf_token %}
+
+     <fieldset>
+        <legend>User personal information</legend>
+        <label>Enter your full name</label><br>
+        <input type="text" name="name"><br>
+         <label>Enter your email</label><br>
+         <input type="email" name="email"><br>
+         <br><label>Enter your gender</label><br>
+         <input type="radio" id="gender" name="gender" value="male"/>Male  <br>
+         <input type="radio" id="gender" name="gender" value="female"/>Female <br/>
+         <label>Enter the date of birth:    </label>
+		 <input type="date" id="birthday" name="birthday">
+
+        </select>
+<br>
+         <input type="submit" value="sign-up">  
+     </fieldset>  
+  </form>  
+ </body>  
+</html>  
