@@ -1,5 +1,45 @@
+
+<style>
+    body {
+      background-color: lightblue;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+
+    }
+
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+}
+</style>
 <h1>{{name}}</h1>
 <h2>email : {{email}}</h2>
 <h2>gender : {{gender}}</h2>
 <h2>date of birth : {{dob}}</h2>
 <h2>unique ID: {{unique_id}}</h2>
+
+
+<br>
+<form action="addLogs" method="post">
+    {% csrf_token %}
+    <input type = "submit" value = "Add Info">
+
+</form>
+
+<br>
+<form action="showLogs" method="post">
+    {% csrf_token %}
+    <input type = "submit" value = "Pateint Hisory">
+
+</form>
+
+
+<br>
+<form action="gohome" method="post">
+        {% csrf_token %}
+        <input type = "submit" value = "Home">
+
+    </form>
+
