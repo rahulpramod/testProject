@@ -1,6 +1,29 @@
-<h1>Welcome to my Page!!!</h1>
+<!DOCTYPE html>
+<html>
+<head>
 
+<style>
+    body {
+      background-color: lightblue;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+
+    }
+
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+}
+</style>
+</head>
+<body>
+<h1>Welcome to Hosp management!!!</h1>
 <h2>Login to see your details</h2>
+
+
+
 
 <form action="add" method='post'>
     {% csrf_token %}
@@ -13,7 +36,7 @@
 
 </form>
 
-
+<br><br>
 <form action="register" method="post">
     {% csrf_token %}
     New User ?
@@ -22,3 +45,15 @@
 </form>
 
 <h3>{{reg_msg}}</h3>
+<img src="https://serving.photos.photobox.com/285023974c07f61f7f72050f2c9f3c789c0c9c5f5d34d4b6fa5e2cb7e56c43425008c8ec.jpg">
+
+<br>
+<form action="about" method="post">
+    {% csrf_token %}
+    <input type = "submit" value = "About this Project">
+
+</form>
+
+
+</body>
+</html>
